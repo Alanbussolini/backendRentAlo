@@ -9,8 +9,6 @@
     {{!-- fin fila 1--}}
 </div>
 
- 
-
 {{!-- fila 2--}}
 <div class="row">
     <div class="col-7">
@@ -18,7 +16,7 @@
 
     </div>
     <div class="col-5 text-end">
-        <a class="btn btn-success" href="/admin/novedades/agregar"> <i class="fa fa-plus" aria-hidden="true"></i> Nuevo
+        <a class="btn btn-success" href="/admin/santadeptos/agregar"> <i class="fa fa-plus" aria-hidden="true"></i> Nuevo
         </a>
     </div>
 
@@ -39,18 +37,18 @@
             </thead>
 
             <tbody>
-                {{#each novedades}}
+                {{#each santadeptos}}
                 <tr>
                     <th scope="row">{{id}}</th>
                     <td>{{titulo}}</td>
                     <td>{{{imagen}}}</td>
                     <td class="text-end">
 
-                        <a class="btn btn-secondary" href="/admin/novedades/modificar/{{id}}"><i class="fa fa-pencil"
+                        <a class="btn btn-secondary" href="/admin/santadeptos/modificar/{{id}}"><i class="fa fa-pencil"
                                 aria-hidden="true"></i> </a>
 
 
-                        <a class="btn btn-secondary" href="/admin/novedades/eliminar/{{id}}"><i class="fa fa-trash"
+                        <a class="btn btn-secondary" href="/admin/santadeptos/eliminar/{{id}}"><i class="fa fa-trash"
                                 aria-hidden="true"></i></a>
                     </td>
                 </tr>

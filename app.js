@@ -15,6 +15,9 @@ var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/admin/login');
 var adminRouter = require('./routes/admin/novedades');
 var apiRouter = require('./routes/api');
+//destinos
+var santadeptosRouter = require('./routes/admin/santadeptos');
+var pinadeptosRouter = require('./routes/admin/pinadeptos');
 
 var app = express();
 
@@ -60,6 +63,8 @@ app.use('/users', usersRouter);
 app.use('/admin/login', loginRouter);
 app.use('/admin/novedades', secured, adminRouter);
 app.use('/api', cors(), apiRouter);
+app.use('/admin/santadeptos', secured, santadeptosRouter);
+app.use('/admin/pinadeptos', secured, pinadeptosRouter);
 
 // catch 404 and forward to error handler 
 app.use(function(req, res, next) {
